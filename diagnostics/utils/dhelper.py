@@ -19,3 +19,7 @@ def load_settings(json_path):
     with open(json_path, 'r') as f:
         data = json.load(f)
     return to_namespace(data)
+
+def dict_to_settings(data_dict):
+    """Converts an existing dictionary to a Namespace."""
+    return to_namespace(data_dict)
