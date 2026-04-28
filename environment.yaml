@@ -11,3 +11,4 @@ dependencies:
   - intake
   - intake-esm
   - jupyter
+  - papermill
