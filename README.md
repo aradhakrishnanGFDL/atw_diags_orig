@@ -63,6 +63,15 @@ conda activate spear-analysis
 jupyter lab
 ```
 
+Running with snakemake
+``
+conda activate /nbhome/Aparna.Radhakrishnan/conda/envs/snakemake-env/
+python -m snakemake -j 1 -p --forceall
+``
+One can also run with papermill 
+
+conda run papermill -k spear-analysis diagnostics/atw_atmos_ts_monthly_sfc_ocean_updated.ipynb diagnostics/atw_atmos_ts_monthly_sfc_ocean_executed.ipynb
+
 ## Development Timeline
 
 **Phases**
