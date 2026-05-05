@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atw_diags"
+version = "0.1.0"
+description = "Diagnostic tools for ATW."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "xarray",
+    "numpy",
+    "matplotlib",
+    "Cartopy",
+    "xesmf",
+    "netCDF4",
+    "intake",
+    "intake-esm",
+    "jupyter",
+    "papermill"
+]
+
+[project.urls]
+Homepage = "https://github.com/AndrewWittenberg/atw_diags"
