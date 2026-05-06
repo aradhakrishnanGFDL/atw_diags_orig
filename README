@@ -1,6 +1,0 @@
-# 1. Install the tricky dependencies using conda
-conda env create -f environment.yml
-conda activate your_env_name
-
-# 2. Install the atw_diags package into that environment
-pip install .

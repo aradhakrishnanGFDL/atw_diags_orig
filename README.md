@@ -54,7 +54,7 @@ conda env create -n spear-analysis -f environment.yaml
 conda activate spear-analysis
 ```
 
-## How to run
+## How to run interactively
 Run the ferret_test_final.ipynb notebook after starting JupyterLab. If you want to apply the "conservative" regridding, change the argument inside the xe.Regridder function from "bilinear" to "conservative".
 
 ```bash
@@ -84,3 +84,19 @@ conda run papermill -k spear-analysis diagnostics/atw_atmos_ts_monthly_sfc_ocean
    
 Efficiency and workflow development proceed in parallel; validation spans all phases.
 User engagement throughout.
+
+## How to install and use through pip
+```bash
+# 1. Install the tricky dependencies using conda
+conda env create -f environment.yml
+conda activate your_env_name
+
+# 2. Install the atw_diags package into that environment
+pip install .
+
+# 3. Install the kernel (Is there a better way?)
+python -m ipykernel install --user --name spear-analysis --display-name "spear-analysis"
+
+# 4. Run command-line tool
+run-atw-diags output.ipynb
+```
